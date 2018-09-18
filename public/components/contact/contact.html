@@ -1,0 +1,38 @@
+<div id="contact" class="col-md-6 py-5 ud-sidebar ud-sidebar-right ud-closed">
+  <a ng-click="contactClose()" class="ud-close-icon" aria-label="Close">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+  <h2 class="mb-3">Contact Us</h2>
+  
+  <form class="form" name="form" ng-submit="submitForm(form)" ng-controller="ContactCtrl" novalidate>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="name">Name*</label>
+        <input type="text" class="form-control" id="name" name="name" ng-model="contact.name" required>
+        <div class="invalid-feedback" ng-show="form.name.$invalid && submitted">Please provide a valid name.</div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="email">Email*</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" ng-model="contact.email" required>
+        <div class="invalid-feedback" ng-show="form.email.$error.email && submitted">Doesn't look like a valid email.</div>
+        <div class="invalid-feedback" ng-show="form.email.$invalid && submitted">Please provide a valid email.</div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <label for="message">Message*</label>
+        <textarea rows="6" id="message" class="input-full form-control" name="message" placeholder="How can we help?" ng-model="contact.message" required></textarea>
+        <div class="invalid-feedback" ng-show="form.message.$invalid && submitted">Please provide a message.</div>
+      </div>
+    </div>
+
+    <div class="alert alert-success" ng-show="success">Email sent! Our team will respond as soon as possible.</div>
+
+    <button class="btn btn-primary text-uppercase" type="submit">Send <i class="fas fa-paper-plane"></i></button>
+  </form>
+
+</div>
