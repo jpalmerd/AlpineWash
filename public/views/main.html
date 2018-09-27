@@ -192,9 +192,11 @@
     <div class="row">
       <div class="col-md-12">
         <ul>
-          <li><a href="#" class="text-uppercase">Services</a></li>
+          <!-- <li><a href="#" class="text-uppercase">Services</a></li>
           <li><a href="#" class="text-uppercase">Contact</a></li>
-          <li><a href="#" class="text-uppercase">Jobs</a></li>
+          <li><a href="#" class="text-uppercase">Jobs</a></li> -->
+          <li><a ng-click="privacyOpen()" class="color-primary text-uppercase">Privacy Policy</a></li>
+          <li><a ng-click="termsOpen()" class="color-primary text-uppercase">Terms of Use</a></li>
         </ul>
       </div>
     </div>
@@ -203,6 +205,8 @@
 
 <div ng-include="'components/contact/contact.html'"></div>
 <div ng-include="'components/jobs/jobs.html'"></div>
+<div ng-include="'components/privacy-policy/privacy-policy.html'"></div>
+<div ng-include="'components/terms-of-use/terms-of-use.html'"></div>
 
 <script>
   function initMap() {

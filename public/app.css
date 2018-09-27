@@ -1,3 +1,8 @@
+.color-primary {
+  color: rgba(102,90,167,1) !important;
+}
+
+
 body.ud-sidebar-open {
   overflow-y: hidden;
 }
